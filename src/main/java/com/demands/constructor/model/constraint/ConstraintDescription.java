@@ -1,10 +1,10 @@
-package com.demands.constructor.constraint;
+package com.demands.constructor.model.constraint;
 
-import com.demands.constructor.LocalizationDescription;
+import com.demands.constructor.model.LocalizationDescription;
 
 
 /**
- * Class used to describe validation rule for specific {@link com.demands.constructor.field.FieldDescription} data
+ * Class used to describe validation rule for specific {@link com.demands.constructor.model.field.FieldDescription} data
  */
 
 public class ConstraintDescription {

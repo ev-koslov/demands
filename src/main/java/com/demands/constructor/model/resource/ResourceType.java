@@ -1,4 +1,4 @@
-package com.demands.constructor.resource;
+package com.demands.constructor.model.resource;
 
 
 public enum ResourceType {

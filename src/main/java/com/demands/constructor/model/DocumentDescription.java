@@ -1,23 +1,18 @@
-package com.demands.constructor;
+package com.demands.constructor.model;
 
 
-import com.demands.constructor.field.FieldDescription;
+import com.demands.constructor.model.field.FieldDescription;
 
-import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
-@Entity
 public class DocumentDescription {
-    @Id
-    @GeneratedValue
+
     private long id;
 
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private LocalizationDescription name = new LocalizationDescription();
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<FieldDescription> fields = new ArrayList<>();
 
     public long getId() {

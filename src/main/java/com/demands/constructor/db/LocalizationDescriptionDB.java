@@ -1,7 +1,7 @@
 package com.demands.constructor.db;
 
 import com.demands.QLocalizationDescription;
-import com.demands.constructor.LocalizationDescription;
+import com.demands.constructor.model.LocalizationDescription;
 import com.querydsl.sql.SQLQueryFactory;
 import org.springframework.stereotype.Repository;
 

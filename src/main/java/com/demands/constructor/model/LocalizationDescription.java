@@ -1,4 +1,4 @@
-package com.demands.constructor;
+package com.demands.constructor.model;
 
 
 import javax.persistence.Entity;

@@ -1,6 +1,6 @@
-package com.demands.constructor.field;
+package com.demands.constructor.model.field;
 
-import static com.demands.constructor.field.DataType.*;
+import static com.demands.constructor.model.field.DataType.*;
 
 /**
  * Enumeration of input field types. Used on client side to determine what input field to render.

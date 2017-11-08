@@ -1,4 +1,4 @@
-package com.demands.constructor.constraint;
+package com.demands.constructor.model.constraint;
 
 public enum ConstraintType {
     NOT_EMPTY,

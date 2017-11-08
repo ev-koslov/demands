@@ -1,10 +1,10 @@
-package com.demands.constructor.resource;
+package com.demands.constructor.model.resource;
 
-import com.demands.constructor.LocalizationDescription;
+import com.demands.constructor.model.LocalizationDescription;
 
 /**
  * Class describes resource to get predefined list of data
- * for specific {@link com.demands.constructor.field.FieldDescription}
+ * for specific {@link com.demands.constructor.model.field.FieldDescription}
  */
 public class ResourceDescription {
 

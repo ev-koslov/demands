@@ -1,14 +1,15 @@
-package com.demands.constructor.field;
+package com.demands.constructor.model.field;
 
-import com.demands.constructor.LocalizationDescription;
-import com.demands.constructor.constraint.ConstraintDescription;
-import com.demands.constructor.resource.ResourceDescription;
+import com.demands.constructor.model.LocalizationDescription;
+import com.demands.constructor.model.DocumentDescription;
+import com.demands.constructor.model.constraint.ConstraintDescription;
+import com.demands.constructor.model.resource.ResourceDescription;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Class describes custom field in {@link com.demands.constructor.DocumentDescription}.
+ * Class describes custom field in {@link DocumentDescription}.
  */
 
 public class FieldDescription {

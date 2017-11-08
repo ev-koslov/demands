@@ -1,7 +1,7 @@
 package com.demands.constructor.db;
 
 import com.demands.QConstraintDescription;
-import com.demands.constructor.constraint.ConstraintDescription;
+import com.demands.constructor.model.constraint.ConstraintDescription;
 import com.querydsl.sql.SQLQueryFactory;
 import org.springframework.stereotype.Repository;
 
