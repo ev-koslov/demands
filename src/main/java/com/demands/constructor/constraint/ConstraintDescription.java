@@ -2,15 +2,11 @@ package com.demands.constructor.constraint;
 
 import com.demands.constructor.LocalizationDescription;
 
-import javax.persistence.*;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Class used to describe validation rule for specific {@link com.demands.constructor.field.FieldDescription} data
  */
-@Entity
+
 public class ConstraintDescription {
 
     public ConstraintDescription() {
@@ -21,14 +17,11 @@ public class ConstraintDescription {
         this.type = type;
     }
 
-    @Id
-    @GeneratedValue
     private long id;
 
-    @Enumerated(value = EnumType.STRING)
+    //constraint type - custom or predefined
     private ConstraintType type;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private LocalizationDescription name = new LocalizationDescription();
 
 

@@ -2,17 +2,10 @@ package com.demands.constructor.resource;
 
 import com.demands.constructor.LocalizationDescription;
 
-import javax.persistence.*;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
  * Class describes resource to get predefined list of data
  * for specific {@link com.demands.constructor.field.FieldDescription}
  */
-
-@Entity
 public class ResourceDescription {
 
     public ResourceDescription() {
@@ -23,14 +16,11 @@ public class ResourceDescription {
         this.type = type;
     }
 
-    @Id
-    @GeneratedValue
     private long id;
 
-    @Enumerated(value = EnumType.STRING)
+    //resource description - predefined or custom
     private ResourceType type;
 
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private LocalizationDescription name = new LocalizationDescription();
 
 

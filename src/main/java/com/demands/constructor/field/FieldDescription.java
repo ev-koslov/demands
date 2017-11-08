@@ -4,56 +4,45 @@ import com.demands.constructor.LocalizationDescription;
 import com.demands.constructor.constraint.ConstraintDescription;
 import com.demands.constructor.resource.ResourceDescription;
 
-import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Class describes custom field in {@link com.demands.constructor.DocumentDescription}.
  */
 
-@Entity
 public class FieldDescription {
-
-    @Id
-    @GeneratedValue
     private long id;
 
     //type of field used to make input.
     //Should be used on client-side to render concrete input field with specified type
-    @Enumerated(value = EnumType.STRING)
     private FieldType type;
+
     //type of field data
-    @Enumerated(value = EnumType.STRING)
     private DataType dataType;
 
     //embedded object with field name localizations
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private LocalizationDescription name = new LocalizationDescription();
 
     //list of constraint used to check if field contains valid data
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<ConstraintDescription> constraints;
+    private List<ConstraintDescription> constraints = new ArrayList<>();
 
     //description of resource which provides predefined data for field value
     //if field expecting string/number from user input, should be null
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private ResourceDescription resourceType;
+    private ResourceDescription resourceReference;
 
     //default field value
     private String defaultValue;
 
     public FieldDescription() {
-        constraints = new ArrayList<>();
+
     }
 
     public FieldDescription(FieldType type) {
         this.type = type;
         this.dataType = type.getDataType();
     }
+
 
     public long getId() {
         return id;
@@ -95,12 +84,12 @@ public class FieldDescription {
         this.constraints = constraints;
     }
 
-    public ResourceDescription getResourceType() {
-        return resourceType;
+    public ResourceDescription getResourceReference() {
+        return resourceReference;
     }
 
-    public void setResourceType(ResourceDescription resourceType) {
-        this.resourceType = resourceType;
+    public void setResourceReference(ResourceDescription resourceReference) {
+        this.resourceReference = resourceReference;
     }
 
     public String getDefaultValue() {
